@@ -4,13 +4,14 @@ import java.io.File
 
 fun main() {
     // Tu peux tester tes fonctions en les appellants ici.
+    lire()
 }
 
 /**
  * (1 point) Affiche dans la console le contenu du fichier message.txt qui se trouve dans le projet de départ.
  */
 fun lire() {
-
+    println(File("message.txt").readLines())
 }
 
 /**
@@ -22,5 +23,10 @@ fun lire() {
  * Si tout s'est bien passé, on retourne la valeur 1.
  */
 fun ecrire(args: Array<String>): Int {
+    if (args.size !=2){
+        println("pipo.txt")
+    }
+    return -1
+    File(args[0].printWriter().use{it.println(args[1])})
     return 1
 }
